@@ -3,6 +3,7 @@ import json
 import numpy as np
 import pandas as pd
 import os
+import time
 
 # search a stock data during a time
 def stock_collect(stockid,start,end):
