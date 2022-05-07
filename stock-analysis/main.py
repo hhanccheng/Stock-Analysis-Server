@@ -14,7 +14,7 @@ pondraw_html = "pondraw.html"
 
 def do_parse():
     # Kline解析
-    sf_parse.parse_kline(stock,kline_html)
+    #sf_parse.parse_kline(stock,kline_html)
 
     # pondraw解析
     sf_parse.parse_pondraw(stock,pondraw_html)
