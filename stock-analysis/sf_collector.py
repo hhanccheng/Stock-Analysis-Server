@@ -21,4 +21,6 @@ def stock_collect(stockid,start,end):
 
 
 
-    
+end = int(time.time())
+start = end - (3600*24*600)
+stock_collect("AMD",start,end)    
