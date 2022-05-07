@@ -22,7 +22,7 @@ def kline(df,stockid):
     MA5 = 120
     MA6 = 240
 
-    #dfreshape = df.reset_index()
+    dfreshape = df.reset_index()
     dfreshape['datetime'] = mdates.date2num(df.index.values.astype(dt.date))/1000
     
     # clean day data for candle view 
@@ -205,7 +205,7 @@ def kline(df,stockid):
 def pondraw(df,stockid):
 
     #format data
-    #dfreshape = df.reset_index()
+    dfreshape = df.reset_index()
     dfreshape['datetime'] = dfreshape.index.values.astype(dt.date)
     dfreshape.drop('volume', axis=1, inplace = True)
     dfreshape = dfreshape.reindex(columns=['datetime','open','high','low','close'])
