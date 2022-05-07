@@ -1,7 +1,7 @@
 import sf_parse
 import time
 
-stock = "stock.txt"
+stock = "stock"
 
 #filter file
 stock_filter = "stock_filter"
