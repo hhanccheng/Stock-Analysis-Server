@@ -11,4 +11,3 @@ mv sslnginx.conf /etc/nginx/nginx.conf
 sed -i "s/example.com/$domain/g" /etc/nginx/nginx.conf
 systemctl restart httpd mariadb nginx
 
-# auto renew
