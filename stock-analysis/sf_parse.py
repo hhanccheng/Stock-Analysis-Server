@@ -22,6 +22,7 @@ def parse_kline(filter_dic,htmlname):
         try:
             df = sf_collector.stock_collect(i,start,end)
             sf_graph.kline(df, i)
+            print(i)
             sf_progressbar.printProgress(stock_count,len(filter_lis))
         except ValueError:
             sf_progressbar.printProgress(stock_count,len(filter_lis))
@@ -40,6 +41,7 @@ def parse_pondraw(filter_dic,htmlname):
         try:
             df = sf_collector.stock_collect(i,start,end)
             sf_graph.pondraw(df,i)
+            print(i)
             sf_progressbar.printProgress(stock_count,len(filter_lis))
         except ValueError:
             sf_progressbar.printProgress(stock_count,len(filter_lis))
