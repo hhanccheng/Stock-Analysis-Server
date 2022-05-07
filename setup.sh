@@ -17,10 +17,11 @@ pacman -S nginx
 systemctl start nginx
 
 #configuration files
-mv httpd.conf /etc/httpd/conf/httpd.conf
-mv nginx.conf /etc/nginx/nginx.conf
+cp httpd.conf /etc/httpd/conf/httpd.conf
+cp nginx.conf /etc/nginx/nginx.conf
 
 systemctl enable httpd mariadb nginx
 systemctl start httpd mariadb nginx
 
-# Default: nginx index files in /ust/share/nginx/html with port 80, apache index file is in /srv/http with port 8080
+# Default: nginx index files in /ust/share/nginx/html with port 80, 
+# apache index file is in /srv/http with port 8080
