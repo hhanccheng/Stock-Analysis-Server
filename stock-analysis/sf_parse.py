@@ -6,7 +6,6 @@ import sf_reader
 import sf_collector
 import sf_progressbar
 import sf_mkformat
-import sf_indicators
 import sf_writer
 import sf_graph
 
