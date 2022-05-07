@@ -4,27 +4,6 @@ import numpy as np
 import pandas as pd
 import os
 
-# find stock id list
-def tradv_geter():
-    site = "https://scanner.tradingview.com/america/scan"
-    response = requests.get(site)
-    data = json.loads(response.text)
-    df = pd.DataFrame(data['data'])
-    id_list = []
-    df.to_csv('temp.csv')
-    f = open('temp.csv')
-    line = f.readline()
-    line = f.readline()
-    while line:
-        new_line = line.split(',')
-        temp_list = new_line[1].split(':')
-        if(temp_list[0] == 'NASDAQ'):
-            id_list.append(temp_list[1])
-        line = f.readline()
-    os.remove('temp.csv')
-    print(len(id_list))
-    return id_list
-
 # search a stock data during a time
 def stock_collect(stockid,start,end):
     try:
@@ -36,6 +15,10 @@ def stock_collect(stockid,start,end):
         return df
     except:
         return None
+
+end = int(time.time())
+start = end - (3600*24*600)
+stock_collect('AMD',start,end)
 
 
 
