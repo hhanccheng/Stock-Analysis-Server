@@ -13,6 +13,7 @@ def stock_collect(stockid,start,end):
         data = json.loads(response.text)
         df = pd.DataFrame(data['chart']['result'][0]['indicators']['quote'][0], index=pd.to_datetime(np.array(data['chart']['result'][0]['timestamp'])*1000*1000*1000))
         df = df[['open', 'high', 'close', 'low', 'volume']]
+        print (df)
         return df
     except:
         return None
