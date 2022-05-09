@@ -7,7 +7,6 @@ from matplotlib import ticker as mticker
 from mplfinance.original_flavor import candlestick_ohlc
 from matplotlib.dates import DateFormatter, WeekdayLocator, DayLocator, MONDAY,YEARLY
 from matplotlib.dates import MonthLocator,MONTHLY
-import pylab
 import sf_indicators
 import time
 

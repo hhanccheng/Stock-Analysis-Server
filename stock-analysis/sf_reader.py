@@ -1,6 +1,6 @@
 
 # normal reader
-def filter_reader(fname):
+def stock_reader(fname):
     f = open(fname)
     line = f.readline()
     id_list = line.split(" ")
